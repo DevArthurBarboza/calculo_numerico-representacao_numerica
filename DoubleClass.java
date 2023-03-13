@@ -3,8 +3,8 @@ public class DoubleClass{
     private double example = 3.14159265358979323846; // número usado como exemplo
     private int exponentBitsQnty = 11; // quantidade de bits para representar expoente
     private int precisionNumber = 15; // quantidade de casas após a vírgula que serão mantidas na formatação presente
-    private String minValue = "2.225074e-308"; // menor valor possível
-    private String maxValue = "8.988466e+307"; // maior valor possível
+    private String minValue = "-1.79769E+308"; // menor valor possível
+    private String maxValue = "1.79769E+308"; // maior valor possível
     private int bitsQnty = 64; // quantidade total de bits usada para representar o número 
     private String usage = "Essa representação é usada quando for necessário maior precisão"; // Critério de uso
     // Mais informações abaixo
@@ -35,12 +35,18 @@ public class DoubleClass{
         return this.summary;
     }
 
+    public String getPrecisionNumber()
+    {
+        return "\nNúmero de casas depois da vírgula : " + this.precisionNumber;
+    }
+
 
     public void printInfo()
     {
         System.out.println(this.getSummary());
         System.out.println(this.getUsage());
         System.out.println(this.getExponentBitsQnty());
+        System.out.println(this.getPrecisionNumber());
         System.out.println(this.getMinValue());
         System.out.println(this.getMaxValue());
         System.out.println(this.getBitsQnty());
@@ -51,6 +57,7 @@ public class DoubleClass{
     {
         return "\nExemplo - o Número 3.14159265358979323846 se convertido para double será : " + this.example;
     }
+    
     public static void main(String[] args){
         DoubleClass doubleClass = new DoubleClass();
         doubleClass.printInfo();

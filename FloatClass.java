@@ -30,6 +30,11 @@ public class FloatClass{
         return "\nUso do atual modelo de armazenamento numérico: " + this.usage;
     }
 
+    public String getPrecisionNumber()
+    {
+        return "\nNúmero de casas depois da vírgula : " + this.precisionNumber;
+    }
+
     public String getSummary()
     {
         return this.summary;
@@ -40,6 +45,7 @@ public class FloatClass{
         System.out.println(this.getSummary());
         System.out.println(this.getUsage());
         System.out.println(this.getExponentBitsQnty());
+        System.out.println(this.getPrecisionNumber());
         System.out.println(this.getBitsQnty());
         System.out.println(this.getMinValue());
         System.out.println(this.getMaxValue());
